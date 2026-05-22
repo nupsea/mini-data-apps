@@ -1,0 +1,18 @@
+[project]
+name = "mini-data-apps"
+version = "0.1.0"
+description = "Monorepo for mini data apps"
+requires-python = ">=3.11"
+dependencies = [
+    "marimo>=0.23.6",
+    "pydantic-ai>=1.99.0",
+    "duckdb>=0.10.0",
+    "sqlglot>=20.0.0",
+    "numpy>=2.4.6",
+    "pyarrow>=24.0.0",
+    "polars>=1.40.1",
+    "nbformat>=5.10.4",
+]
+
+[tool.uv.workspace]
+members = ["twitter-model"]
