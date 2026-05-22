@@ -26,4 +26,4 @@ You can view a static, pre-rendered version of this notebook here:
 
 ### Cloud-Hosted View (molab)
 
-[![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/your-username/your-repo/blob/main/twitter-model/tweet_sql.py)
+[![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/nupsea/mini-data-apps/blob/master/twitter-model/tweet_sql.py)
