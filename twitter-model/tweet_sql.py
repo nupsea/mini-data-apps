@@ -61,7 +61,12 @@ def _(mo):
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    ### DB Setup
+    ### Process
+
+    1. Create the schematic tables
+    2. Insert data into the tables
+    3. View the data tables
+    4. Join the tables to obtain the tweets for a particular user
     """)
     return
 
@@ -103,20 +108,6 @@ def _(duckdb):
 
     # Verify they exist
     print(duckdb.execute("SHOW TABLES;").fetchall())
-    return
-
-
-@app.cell
-def _():
-    return
-
-
-@app.cell
-def _(duckdb):
-    result_cursor = duckdb.execute("SHOW TABLES;").fetchall()
-    print("Tables created in DuckDB:")
-    for row in result_cursor:
-        print(row[0])
     return
 
 
@@ -214,11 +205,6 @@ def _(duckdb, follows, mo, posts, users):
 
 
 @app.cell(hide_code=True)
-def _():
-    return
-
-
-@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
     In DuckDB, the keyword current_user evaluates to the active database user ('duckdb'). Since we have created a user in our users table with the ID 'duckdb', and configured them to follow @alice, @bob, and @charlie, this query compiles and runs unmodified in our database context!
@@ -241,21 +227,11 @@ def _(follows, mo, posts, users):
     return
 
 
-@app.cell
-def _():
-    return
-
-
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
     > This fetches the tweets the user 'duckdb' is interested in.
     """)
-    return
-
-
-@app.cell
-def _():
     return
 
 
